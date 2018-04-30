@@ -1,3 +1,7 @@
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Below is the details of this task
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CodeClan Cinema (CCC (again))
 
 Create a system that handles bookings for our newly built cinema! It's enough if you can call your methods in pry, don't worry about an interface.
@@ -36,9 +40,11 @@ Write a method that finds out what is the most popular time (most tickets sold) 
 Limit the available tickets for screenings.
 Add any other extensions you think would be great to have at a cinema!
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+There are 3 sub folders created,
+db - is for the database and the SqlRunner that opens and close the the connection
+models - for all ruby files
+specs - for testing files
 
-customer1 see film1
-
-customer2 see film2 film3
-
-customer3 see film1 film2 film3
+A photo of the design drawing has also been included.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
