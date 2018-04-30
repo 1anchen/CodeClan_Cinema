@@ -72,4 +72,17 @@ class Film
     @ticket_sold +=1
   end
 
+  def popular_time()
+    sql = "SELECT showing_times.start_time FROM films INNER JOIN tickets ON films.id = tickets.film_id INNER JOIN screenings ON tickets.screening_id = screenings.id INNER JOIN showing_times ON screenings.showing_time_id = showing_times.id WHERE films.id= $1"
+    values = [@id]
+    showing_time_hashes = SqlRunner.run(sql, values)
+    showing_time_hash = Showing_time.map_items(showing_time_hashes)
+    # showing_time_hash.select {|e| showing_time_hash.count(e) > 1}.uniq
+
+    # it is not return a array of hash, still need to find the popular time
+    # showing_time_hash.values
+    # popular_time = showing_time_hash.select{ |k,v| showing_time_hash.count(v) > 1 }.uniq
+    # return popular_time
+  end
+
 end
